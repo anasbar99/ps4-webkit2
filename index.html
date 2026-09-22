@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" manifest="cache.manifest">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PS4 Jailbreak by Sanchezz</title>
+
+    <link rel="stylesheet" href="includes/style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <img src="includes/bungu.png" class="full-screen-background" alt="" aria-hidden="true" />
+
+      <!-- =====================================
+             LEFT SIDE
+        ====================================== -->
+
+      <!-- <section class="left-panel">
+        <div class="gaming-bg"></div>
+        <div class="left-overlay"></div>
+        <div class="ps4-logo">
+          <span class="ps-symbol">PS</span>
+          <span>PS4</span>
+        </div>
+        <div class="left-title">
+          <span>PLAY</span>
+          <strong>BEYOND</strong>
+          <span>LIMITS</span>
+        </div>
+        <div class="game-title god">
+          GOD<br />
+          <span>OF WAR</span>
+        </div>
+        <div class="game-title ml">
+          MOBILE<br />
+          LEGENDS
+        </div>
+        <div class="game-title tlou">
+          THE LAST<br />
+          OF US
+        </div>
+        <div class="stream-text">
+          GAME<br />
+          STREAM<br />
+          <span>NO LIMIT</span>
+        </div>
+        <div class="ps4-console">
+          <div class="console-body"></div>
+          <div class="controller">
+            <span></span>
+          </div>
+        </div>
+        <div class="left-footer">PLAYSTATION 4 PRO</div>
+      </section> -->
+
+      <!-- =====================================
+             RIGHT SIDE
+        ====================================== -->
+
+      <section class="right-panel">
+        <!-- Header -->
+
+        <header class="header">
+          <div class="header-small">PLAYSTATION 4 WEBKIT</div>
+
+          <h1>PS4 <span>JAILBREAK</span></h1>
+
+          <div class="author">by <strong>Sanchezz aja</strong></div>
+        </header>
+
+        <!-- Kernel -->
+
+        <div class="kernel-container">
+          <label class="kernel-option">
+            <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl" />
+
+            <span class="radio"></span>
+
+            <span>NetCtrl</span>
+          </label>
+
+          <label class="kernel-option active">
+            <input type="radio" name="kernel" id="lapse-exploit" value="lapse" checked />
+
+            <span class="radio"></span>
+
+            <span>Lapse</span>
+          </label>
+        </div>
+
+        <!-- Console -->
+
+        <section class="console-card">
+          <div class="console-top">
+            <div class="console-name">
+              <span class="terminal"> &gt;_ </span>
+
+              <div>
+                <strong>EXPLOIT CONSOLE</strong>
+
+                <small> PS4 WebKit output </small>
+              </div>
+            </div>
+
+            <div id="exploit-status" class="exploit-status ready">SIAP!!!</div>
+          </div>
+
+          <pre id="console">Ready. Awaiting execution...</pre>
+        </section>
+
+        <!-- Jailbreak -->
+
+        <button id="jeilbrek" class="jailbreak-button">
+          <span class="bolt"> ⚡ </span>
+
+          <span> JAILBREAK </span>
+        </button>
+
+        <!-- Auto jailbreak -->
+
+        <label class="auto-jailbreak">
+          <div class="auto-icon">⚡</div>
+
+          <div class="auto-text">
+            <strong> Auto Jailbreak </strong>
+
+            <small> Automatically execute exploit </small>
+          </div>
+
+          <input id="autoJbInput" type="checkbox" />
+
+          <span class="toggle"></span>
+        </label>
+
+        <!-- Footer -->
+
+        <footer>
+          <span> PS4 WEBKIT </span>
+
+          <i></i>
+
+          <span> SANchezZ </span>
+
+          <i></i>
+
+          <span> GAMING </span>
+        </footer>
+      </section>
+    </div>
+
+    <!-- Existing exploit scripts -->
+
+    <script src="src/main.js"></script>
+
+    <script src="includes/script.js"></script>
+
+    <!-- UI status handler -->
+
+    <script>
+      /*
+       * Status:
+       *
+       * SIAP!!!   = belum dijalankan
+       * Berjalan  = exploit sedang berjalan
+       * Selesai   = exploit selesai
+       */
+
+      window.setExploitStatus = function (status) {
+        var element = document.getElementById('exploit-status');
+
+        if (!element) {
+          return;
+        }
+
+        element.className = 'exploit-status';
+
+        if (status === 'running') {
+          element.className += ' running';
+
+          element.innerHTML = 'BERJALAN';
+        } else if (status === 'done') {
+          element.className += ' done';
+
+          element.innerHTML = 'SELESAI';
+        } else {
+          element.className += ' ready';
+
+          element.innerHTML = 'SIAP!!!';
+        }
+      };
+    </script>
+  </body>
+</html>

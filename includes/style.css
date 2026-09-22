@@ -1,0 +1,960 @@
+/* =====================================================
+   PS4 JAILBREAK BY SANCHEZZ
+   Dark Gaming UI
+   Optimized for PS4 WebKit
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background: #05070a;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================================
+   MAIN PAGE
+   ===================================================== */
+
+.page {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  min-height: 500px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: radial-gradient(circle at 70% 45%, rgba(0, 83, 255, 0.13), transparent 40%), #05070a;
+}
+
+.full-screen-background {
+  position: fixed;
+
+  z-index: 0;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.72;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   LEFT PANEL
+   ===================================================== */
+
+.left-panel {
+  position: relative;
+  z-index: 1;
+
+  width: 42%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, rgba(6, 16, 30, 0.62), rgba(3, 5, 7, 0.72));
+
+  border-right: 1px solid #18283d;
+}
+
+/* Gaming background */
+
+.gaming-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle at 35% 40%, rgba(0, 110, 255, 0.35), transparent 38%),
+    radial-gradient(circle at 70% 20%, rgba(20, 50, 120, 0.25), transparent 40%);
+
+  opacity: 0.95;
+}
+
+/* Decorative diagonal lines */
+
+.left-panel:before {
+  content: '';
+
+  position: absolute;
+
+  width: 160%;
+
+  height: 160%;
+
+  left: -40%;
+  top: -30%;
+
+  background: repeating-linear-gradient(
+    125deg,
+    transparent 0px,
+    transparent 90px,
+    rgba(0, 110, 255, 0.035) 91px,
+    rgba(0, 110, 255, 0.035) 92px
+  );
+
+  transform: rotate(-4deg);
+
+  pointer-events: none;
+}
+
+.left-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.45)),
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+
+  z-index: 2;
+}
+
+/* =====================================================
+   PS4 LOGO
+   ===================================================== */
+
+.ps4-logo {
+  position: absolute;
+
+  left: 30px;
+  top: 25px;
+
+  z-index: 10;
+
+  font-size: 27px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.ps-symbol {
+  display: inline-block;
+
+  margin-right: 8px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+/* =====================================================
+   LEFT TITLE
+   ===================================================== */
+
+.left-title {
+  position: absolute;
+
+  left: 32px;
+  top: 80px;
+
+  z-index: 10;
+
+  color: #5c6878;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  line-height: 1.8;
+}
+
+.left-title strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+/* =====================================================
+   PERSON
+   ===================================================== */
+
+.person-wrapper {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 7%;
+
+  bottom: -3%;
+
+  width: 65%;
+
+  height: 88%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+.person {
+  display: block;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
+}
+
+/* =====================================================
+   GAME TITLES
+   ===================================================== */
+
+.game-title {
+  position: absolute;
+
+  z-index: 4;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-weight: bold;
+
+  line-height: 0.9;
+}
+
+.game-title.god {
+  right: 7%;
+
+  top: 25%;
+
+  font-size: 24px;
+
+  text-align: right;
+
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.game-title.god span {
+  color: rgba(120, 160, 220, 0.35);
+}
+
+.game-title.ml {
+  right: 8%;
+
+  top: 47%;
+
+  font-size: 14px;
+
+  color: rgba(60, 140, 255, 0.28);
+
+  text-align: right;
+}
+
+.game-title.tlou {
+  right: 10%;
+
+  bottom: 27%;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  text-align: right;
+}
+
+/* =====================================================
+   STREAM TEXT
+   ===================================================== */
+
+.stream-text {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 25px;
+
+  bottom: 18%;
+
+  color: #247cff;
+
+  font-size: 19px;
+
+  font-weight: bold;
+
+  font-style: italic;
+
+  line-height: 0.95;
+
+  text-shadow: 0 0 15px rgba(36, 124, 255, 0.35);
+}
+
+.stream-text span {
+  color: #ffffff;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+/* =====================================================
+   PS4 CONSOLE DECORATION
+   ===================================================== */
+
+.ps4-console {
+  position: absolute;
+
+  z-index: 7;
+
+  left: 25px;
+
+  bottom: 4%;
+
+  width: 150px;
+
+  height: 70px;
+}
+
+.console-body {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 105px;
+  height: 55px;
+
+  background: linear-gradient(145deg, #151b23, #05070a);
+
+  border-left: 2px solid #287cff;
+
+  transform: skewY(-5deg);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.controller {
+  position: absolute;
+
+  right: 0;
+  bottom: -3px;
+
+  width: 65px;
+  height: 35px;
+
+  background: #0c1016;
+
+  border: 1px solid #273445;
+
+  border-radius: 16px;
+
+  transform: rotate(-5deg);
+}
+
+/* =====================================================
+   RIGHT PANEL
+   ===================================================== */
+
+.right-panel {
+  position: relative;
+  margin-left: 42%;
+  z-index: 1;
+
+  width: 58%;
+
+  height: 100%;
+
+  padding: 3vh 4vw 2vh 4vw;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+  margin-bottom: 2vh;
+
+  text-align: center;
+}
+
+.header-small {
+  color: #586576;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 5px;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: clamp(30px, 4vw, 50px);
+
+  font-style: italic;
+
+  letter-spacing: -2px;
+
+  line-height: 0.9;
+}
+
+.header h1 span {
+  color: #1475ff;
+
+  text-shadow: 0 0 25px rgba(20, 117, 255, 0.35);
+}
+
+.author {
+  margin-top: 7px;
+
+  color: #768397;
+
+  font-size: 14px;
+
+  font-style: italic;
+}
+
+.author strong {
+  color: #ffffff;
+}
+
+/* =====================================================
+   KERNEL OPTIONS
+   ===================================================== */
+
+.kernel-container {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 1.5vh;
+}
+
+.kernel-option {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 100px;
+
+  padding: 8px 12px;
+
+  color: #768397;
+
+  background: #0c1118;
+
+  border: 1px solid #202c3b;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.kernel-option.active {
+  color: #ffffff;
+
+  border-color: #1475ff;
+
+  box-shadow: 0 0 12px rgba(20, 117, 255, 0.18);
+}
+
+.kernel-option input {
+  position: absolute;
+
+  opacity: 0;
+}
+
+.radio {
+  width: 11px;
+  height: 11px;
+
+  flex-shrink: 0;
+
+  background: #354153;
+
+  border-radius: 50%;
+}
+
+.kernel-option input:checked + .radio {
+  background: #1475ff;
+
+  box-shadow:
+    0 0 0 3px #172d50,
+    0 0 10px #1475ff;
+}
+
+/* =====================================================
+   CONSOLE
+   ===================================================== */
+
+.console-card {
+  width: 100%;
+
+  background: #05080c;
+
+  border: 1px solid #1c344f;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.console-top {
+  height: 38px;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #0d141d;
+
+  border-bottom: 1px solid #1c2a3a;
+}
+
+.console-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.terminal {
+  color: #1475ff;
+
+  font-family: monospace;
+
+  font-size: 14px;
+}
+
+.console-name strong {
+  display: block;
+
+  color: #dbe3ed;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.console-name small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #4f5d6e;
+
+  font-size: 7px;
+}
+
+.exploit-status {
+  padding: 5px 10px;
+
+  border-radius: 4px;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+/* SIAP */
+
+.exploit-status.ready {
+  color: #00ff88;
+
+  background: rgba(0, 255, 136, 0.07);
+
+  border: 1px solid rgba(0, 255, 136, 0.2);
+
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+/* BERJALAN */
+
+.exploit-status.running {
+  color: #00aaff;
+
+  background: rgba(0, 120, 255, 0.1);
+
+  border: 1px solid rgba(0, 120, 255, 0.3);
+}
+
+/* SELESAI */
+
+.exploit-status.done {
+  color: #00ff88;
+
+  background: rgba(0, 255, 136, 0.12);
+
+  border: 1px solid #00ff88;
+}
+
+#console {
+  width: 100%;
+
+  height: 25vh;
+
+  min-height: 150px;
+
+  max-height: 270px;
+
+  margin: 0;
+
+  padding: 14px;
+
+  overflow: hidden;
+
+  background: #030506;
+
+  color: #00ff66;
+
+  border: 0;
+
+  outline: 0;
+
+  font-family: Consolas, monospace;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+  text-align: left;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  scrollbar-color: #1475ff #030506;
+}
+
+/* =====================================================
+   JAILBREAK BUTTON
+   ===================================================== */
+
+.jailbreak-button {
+  width: 100%;
+
+  height: 70px;
+
+  margin-top: 1.5vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  background: linear-gradient(120deg, #0759dc, #1682ff);
+
+  color: #ffffff;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-size: clamp(22px, 2.5vw, 32px);
+
+  font-weight: 900;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+
+  box-shadow: 0 10px 25px rgba(0, 100, 255, 0.22);
+
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+
+.jailbreak-button:hover {
+  background: linear-gradient(120deg, #1475ff, #3293ff);
+}
+
+.jailbreak-button:active {
+  transform: scale(0.98);
+}
+
+.jailbreak-button:disabled {
+  background: #17263a;
+
+  color: #596879;
+
+  cursor: default;
+
+  box-shadow: none;
+}
+
+.bolt {
+  font-size: 27px;
+}
+
+/* =====================================================
+   AUTO JAILBREAK
+   ===================================================== */
+
+.auto-jailbreak {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top: 9px;
+
+  padding: 8px 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #0b1017;
+
+  border: 1px solid #1c2a3a;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.auto-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #1475ff;
+
+  background: #071326;
+
+  border: 1px solid #1475ff;
+
+  border-radius: 6px;
+
+  font-size: 17px;
+}
+
+.auto-text {
+  flex: 1;
+}
+
+.auto-text strong {
+  display: block;
+
+  color: #dfe7f1;
+
+  font-size: 11px;
+}
+
+.auto-text small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #536173;
+
+  font-size: 8px;
+}
+
+.auto-jailbreak input {
+  display: none;
+}
+
+/* Toggle */
+
+.toggle {
+  position: relative;
+
+  width: 38px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  background: #202b39;
+
+  border-radius: 20px;
+}
+
+.toggle:after {
+  content: '';
+
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  left: 3px;
+  top: 3px;
+
+  background: #8591a0;
+
+  border-radius: 50%;
+}
+
+.auto-jailbreak input:checked + .toggle {
+  background: #1475ff;
+}
+
+.auto-jailbreak input:checked + .toggle:after {
+  left: 21px;
+
+  background: #ffffff;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 1.5vh;
+
+  color: #3e4a59;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+}
+
+footer i {
+  width: 18px;
+  height: 1px;
+
+  background: #1d344f;
+}
+
+/* =====================================================
+   SMALL SCREEN
+   ===================================================== */
+
+@media screen and (max-height: 650px) {
+  .right-panel {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header {
+    margin-bottom: 8px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .kernel-container {
+    margin-bottom: 7px;
+  }
+
+  #console {
+    height: 20vh;
+    min-height: 110px;
+  }
+
+  .jailbreak-button {
+    height: 55px;
+
+    margin-top: 8px;
+  }
+
+  .auto-jailbreak {
+    min-height: 40px;
+  }
+}
+
+/* =====================================================
+   VERY SMALL SCREEN
+   ===================================================== */
+
+@media screen and (max-width: 800px) {
+  .left-panel {
+    width: 38%;
+  }
+
+  .right-panel {
+    width: 62%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .game-title {
+    display: none;
+  }
+
+  .person-wrapper {
+    width: 90%;
+
+    left: 0;
+  }
+
+  .stream-text {
+    font-size: 14px;
+  }
+}
